@@ -6,11 +6,15 @@ import re
 
 class reverso:
     def __init__(self):
-        self.link = 'https://context.reverso.net/traduzione/italiano-inglese/'
+        self.link = 'https://context.reverso.net/translation/'
+        self.langs = {'it': 'italian', 'en': 'english', 'fr': 'french',
+                      'de': 'german', 'jp': 'japanese', 'es': 'spanish'}
 
-    def translate(self, data):
+    def translate(self, main_language, foreign_language, data):
         data = data.replace(' ', '+')
-        url = "%s%s" % (self.link, data)
+        main_language = self.langs[main_language]
+        foreign_language = self.langs[foreign_language]
+        url = "%s%s-%s/%s" % (self.link, main_language, foreign_language, data)
         data = self.get_data(url)
         return self.words(data)
 
