@@ -16,3 +16,8 @@ this simple python script allow you to translate text directly from the command 
     -c /  --content           The text to translate
 
 >The language must be the 2 letter country code (EX: en, de, it)
+>
+
+# NOTE
+To translate you need a Yandex api_key
+Right now it does not have a configuration file where to store the key (coming soon) and you have to place the key inside `libs/yandex.py`
