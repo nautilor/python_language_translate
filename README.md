@@ -4,7 +4,7 @@ this simple python script allow you to translate text directly from the command 
 
 ### Usage
 
-    $ translate --main_language it  --foreign_language en --content "corrente elettrica"
+    $ translate --language en --content "corrente elettrica"
         electricity
         electric current
         electrical current
@@ -12,14 +12,7 @@ this simple python script allow you to translate text directly from the command 
     $
 
 ### Arguments
-    -m / --main_language      Language you would like to translate from
-    -f / --foreign_languate   Language you would like to translate to
-    -c /  --content           The text tp tramslate
-    
-### Supported Languages [TO EXTEND]
-      'it': 'italian'
-      'en': 'english'
-      'fr': 'french'
-      'de': 'german'
-      'jp': 'japanese'
-      'es': 'spanish'
+    -l / --language           The language you want to translate to
+    -c /  --content           The text to translate
+
+>The language must be the 2 letter country code (EX: en, de, it)
